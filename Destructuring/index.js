@@ -15,6 +15,17 @@ console.log(`${name} is ${age}`);
 const {city: myCity = 'okokok'} = person.location;
 console.log(myCity);
 
+const addOne = (data) => data.a + data.b;
+console.log(addOne({a: 3, b: 3}));
+
+const addTwo = ({ a, b }) => a + b;
+const o = {
+  a: 33,
+  b: 7
+};
+console.log(addTwo(o));
+
+
 // Array Destructuring
 const Javascript = ['React', 'Router', 'Redux', 'JSX', 'ES6', 'ES7', 'Webpack'];
 const [one, two, , foor, , six] = Javascript
