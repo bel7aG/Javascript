@@ -15,7 +15,7 @@ console.log(`${name} is ${age}`);
 const {city: myCity = 'okokok'} = person.location;
 console.log(myCity);
 
-// Object Destructuring
+// Array Destructuring
 const Javascript = ['React', 'Router', 'Redux', 'JSX', 'ES6', 'ES7', 'Webpack'];
 const [one, two, , foor, , six] = Javascript
 console.log(`you are good in ${one} ${two} ${six}`);
