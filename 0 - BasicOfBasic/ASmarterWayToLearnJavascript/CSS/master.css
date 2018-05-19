@@ -1,0 +1,28 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+}
+
+#circle {
+   content = "sssss";
+   color: white;
+   width: 100px;
+   height: 100px;
+   background-color: red;
+   border-radius: 100%;
+   padding: 50px;
+   opacity: .5;
+}
+
+input[type="text"] {
+   margin-top: 110px;
+   padding: 10px;
+   trasition: .3s;
+}
+input[type="text"]:focus {
+   color: red;
+   border-color: red;
+}

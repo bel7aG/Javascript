@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="subject" content="learn Javascript">
+        <meta name="keywords" content="Belhassen gharsallah learn javascript">
+        <title>Home</title>
+        <link rel="stylesheet" href="CSS/master.css">
+        <script src="JS/main.js"></script>
+    </head>
+    <body onResize="changeImageSize();">
+        <header>
+            <div class="headShot">
+                <div id="headMe">
+                    <h1 id="h1Style" onMouseOver="changeColor();" onMouseOut="changeAgain();">Header Of Section</h1>
+                    <img src="IMG/cube.png" id="cube" alt="Cube" onclick="changeMe();" onMouseDown="wannaCheckMouseMoveHere();" onDblclick="dblClick();">
+                </div>
+            </div>
+
+
+            <div class="formContainer">
+                <p id="pOne">Belhassen odhher ekhtafi</p>
+                <p id="pTwo">Shit odhher ekhtafi</p>
+                <p id="pThree">Done odhher ekhtafi</p>
+
+                <form name="F" method="POST" >
+                    <label for="mercedes">Mercedes FUNK</label>
+                    <input type="checkbox" id="mercedes" name="mercedes" value="mercedes" onclick="showPara();">
+                    <br><br>
+                    <label for="bmw">BMW FUNK</label>
+                    <input type="checkbox" id="bmw" name="bmw" value="bmw" onclick="showPara();">
+                    <br><br>
+                    <label for="corvette">Corvette FUNK</label>
+                    <input type="checkbox" id="corvette" name="corvette" value="mercedes" onclick="showPara();">
+
+                </form>
+            </div>
+
+            <p onmousemove="changeThis();" id="changeParagraph">Change Text with .innerHTML</p>
+        </header>
+
+        <button type="button" id="myButton" name="button">Hello click me to add some effect on you site :D</button>
+        <footer>
+
+        </footer>
+        <script>
+        document.getElementById("myButton").onclick=function() {
+            alert("i alert this Shit");
+        }
+</script>
+    </body>
+</html>

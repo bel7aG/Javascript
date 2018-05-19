@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+  font-family: arial;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #111;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+canvas {
+  background-color: #eeeed8;
+}

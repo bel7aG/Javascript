@@ -1,0 +1,76 @@
+*, ::after, ::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --yellow: #cadf1f;
+   --darkgrey: #333;
+   --black: #000;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   background-color: var(--black);
+
+}
+
+header {
+   position: relative;
+   height: 20vh;
+   background-color: var(--darkgrey);
+}
+input[type = 'button'] {
+   padding: 2rem 3rem;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   background-color: rgba(245, 21, 21, .8);
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   font-size: 2rem;
+   border: 0;
+   border-radius: 5px;
+   box-shadow: 0 0 7px rgba(223, 64, 29, 0.7);
+
+}
+
+input[type = 'button']:hover {
+   transform: translate(-46%, -53%);
+   color: white;
+   box-shadow: -2px 1rem 2rem rgba(240, 240, 220, .3);
+   transition: all .3s;
+}
+input[type = 'button']:hover:active {
+   transform: translate(-50%, -50%);
+   color: white;
+   box-shadow: 0 0.2rem 1rem rgba(110, 110, 110, .7);
+
+}
+
+input[type = 'button']:not(:hover) {
+   transition:.4s;
+}
+
+.big-box {
+   margin-top: 1vh;
+   height: 76vh;
+   width: 76vh;
+   margin-left: 50%;
+   transform: translateX(-50%);
+   background-color: #215;
+   position: relative;
+}
+
+.big-box > .animate {
+   width: 70px;
+   height: 70px;
+   background-color: rgba(40, 201, 158, 0.86);
+   border-radius: 100%;
+   position: absolute;
+}
