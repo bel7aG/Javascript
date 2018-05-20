@@ -18,12 +18,12 @@ console.log(myCity);
 const addOne = (data) => data.a + data.b;
 console.log(addOne({a: 3, b: 3}));
 
-const addTwo = ({ a, b }) => a + b;
+const addTwo = ({ a, b }, c) => a + b - c;
 const o = {
   a: 33,
   b: 7
 };
-console.log(addTwo(o));
+console.log(addTwo(o, 20));
 
 
 // Array Destructuring
