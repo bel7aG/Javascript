@@ -14,13 +14,17 @@ class Node {
   }
 }
 
+class Tree {
+  constructor() {
+    this.root = null;
+  }
+}
+
 const nodeOne = new Node(100);
+const tree = new Tree();
+tree.root = nodeOne;
 nodeOne.add(33);
 nodeOne.add(11);
 nodeOne.add(22);
-console.log(nodeOne);
-
-
 nodeOne.remove(33);
-
-console.log(nodeOne);
+console.log(tree);

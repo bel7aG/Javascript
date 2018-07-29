@@ -3,22 +3,6 @@
 
 const items = document.querySelector('#items');
 console.log(items);
-let i = j = 0;
-let k;
-
-
-
-while (items.childNodes) {
-  if (items.childNodes[i].nodeType === 3) {
-    if (items.childNodes[i+1]) {
-      k[j] = items.childNodes[i+1];
-      j++;
-    }
-  }
-  i++;
-}
-console.log(k);
-
 
                                        // parentNode
 console.log(items.parentNode);
