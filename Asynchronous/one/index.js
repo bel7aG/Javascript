@@ -1,23 +1,34 @@
-function getSalary() {
-  return 3000;
+function getSalary(callback) {
+  setTimeout(() => {
+    callback(3000);
+  }, 1000);
 }
 
-function subtractTax(salary) {
-  return salary * 0.85;
+function subtractTax(salary, callback) {
+  setTimeout(() => {
+    callback(salary * 0.85);
+  }, 1000);
 }
 
-function subtractRent(salary) {
-  return salary - 500;
+function subtractRent(salary, callback) {
+  setTimeout(() => {
+    callback(salary - 500);
+  }, 1000);
 }
 
-function getDisposalIncome() {
-  let salary = getSalary();
-  salary = subtractTax(salary);
-  salary = subtractRent(salary);
-  return salary;
+function getDisposalIncome(callback) {
+  getSalary((salary) => {
+    subtractTax(salary, salary => {
+      subtractRent(salary, salary => {
+        callback(salary);
+      });
+    });
+  });
 }
 
-console.log(getDisposalIncome());
+getDisposalIncome((salary) => {
+  console.log(salary);
+});
 
 
 
