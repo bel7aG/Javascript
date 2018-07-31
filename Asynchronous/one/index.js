@@ -76,13 +76,13 @@ function subtractRentES6(salary) {
     }, 1000);
   });
 }
+const getDisposalIncomeES6 = () => (
+  getSalaryES6()
+  .then(subtractTaxES6)
+  .then(subtractRentES6)
+);
 
-function getDisposalIncomeES6() {
-  const salaryPromise = getSalaryES6();
-  const taxPromise = salaryPromise.then(salary_1 => subtractTaxES6(salary_1));
-  const rentPromise = taxPromise.then(salary_2 => subtractRentES6(salary_2));
-  return rentPromise;
-}
+
 
 getDisposalIncomeES6().then(desposable => {
   console.log(desposable);
