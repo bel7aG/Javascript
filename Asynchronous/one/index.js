@@ -53,12 +53,21 @@ getDisposalIncomeOld(disposable => {
 */
         /*3*/
 
-function getSalaryES6() {
+function getSalaryES6(salary) {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(3000);
+      resolve(salary);
     }, 1000);
   });
+}
+
+function getSalarySum() {
+  return Promise.all([
+    getSalaryES6(1000),
+    getSalaryES6(760),
+    getSalaryES6(950),
+    getSalaryES6(4000)
+  ]).then(salaries => salaries.reduce((prev, cur) => prev + cur, 0));
 }
 
 function subtractTaxES6(salary) {
@@ -77,7 +86,7 @@ function subtractRentES6(salary) {
   });
 }
 const getDisposalIncomeES6 = () => (
-  getSalaryES6()
+  getSalarySum()
   .then(subtractTaxES6)
   .then(subtractRentES6)
 );
