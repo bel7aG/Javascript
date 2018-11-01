@@ -1,2 +1,0 @@
-// Promises
-console.log('okok');
