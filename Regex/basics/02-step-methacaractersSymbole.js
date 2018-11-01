@@ -28,12 +28,10 @@ regex = /^love ecmascript and reac[^t]$/; // not much because it's react with a 
 
 regex = /^love ecmascript and react?$/; // !IMPORTANT much because ? 0 or 1 and so t can be 1 so its much
 regexTest(regex, myString);
-
-
-
 console.log("\n\n\n\n");
 
                          // NEXT
+
 myString = `bel7aG`;
 
 regex = /^b.{4}g$/i;     //matched
@@ -47,3 +45,21 @@ regex = /b?e?l?7a?G$/; //matched but if i remove the 7 or i dont end with big G 
 regexTest(regex, myString)
 
 console.log("\n\n\n\n");
+
+regex = /^\d*$/; //matched
+regex = /^\d+$/; //matched
+regex = /^\d?$/; //NOT matched
+regex = /^\d\d\d\d?$/; //matched
+regex = /^...\d?$/; //matched
+
+let myNumber = "1234"
+
+regexTest(regex, myNumber);
+
+console.log("\n\n\n\n");
+regex = /.{6}\s.{3}$/; //matched
+regex = /Jen[nifer|nny]{0,5}\1{0,5}$/i; //matched \1 match dryourself mean use the first parenthesis or any ..
+
+let myEmail = "jenJENIFEr";
+
+regexTest(regex, myEmail);
