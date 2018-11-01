@@ -1,7 +1,7 @@
 let me = /bel7aG/i; //i for case sensetive
 
-// console.log(me);
-// console.log(me.source);
+console.log(me);
+console.log(me.source);
 me.ex
 const execResult = me.exec('ES6/7/8 Developer bel7aG'); // if match then return array with
 console.log(execResult);
